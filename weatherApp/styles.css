@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Englebert", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    /* background-image: url("../lads/SDAL_9.jpeg"); */
+    /* background-size: cover; */
+}
+
+.splide {
+    width: 100%;
+    height: auto;
+}
+
+.splide img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;  
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.card {
+    width: 90%;
+    max-width: 450px;
+    /* background: linear-gradient(45deg, #FEF9F2, #FFE3E3); */
+    color: #789DBC;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(10px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    width: 85%;
+    border: 0;
+    outline: 0;
+    background: #789DBC;
+    color: #FEF9F2;
+    padding: 10px 25px;
+    height: 50PX;
+    border-radius: 30px;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+::placeholder {
+    color: #FEF9F2;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #DA498D;
+    /* background: transparent; */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.search button img {
+    /* box-shadow: 6px 6px 20px #441752; */
+    width: 35px;
+    height: 35px;
+}
+
+.search button:hover {
+    transform: scale(1.1);
+}
+
+.weather-icon {
+    width: 100px;
+    /* height: 100px; */
+    margin-top: 50px;
+}
+
+.weather hr {
+    width: 100%;
+    border: 1px solid #789DBC;
+    margin: 20px auto;
+}
+
+.weather h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-shadow: 2px 2px 0px #ffffff97;
+}
+
+.weather h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -10px;
+    text-shadow: 2px 2px 0px #ffffff97;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 40px 0 20px 0;
+    font-size: 18px;
+}
+
+.col {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.col img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 24px;
+    margin-top: -5px;
+    font-weight: 700;
+    color: #DA498D;
+}
+
+.city {
+    font-family: "Bebas Neue", serif;
+    color: #DA498D;
+}
+
+p {
+    text-shadow: 1px 1px 0px #ffffff97;
+}
+
+.error {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #DA498D;
+    display: none;
+}

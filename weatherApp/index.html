@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../chibizayne.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Englebert&display=swap" rel="stylesheet">
+    <title>L&DS Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_9.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_2.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_3.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_7.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_1.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_12.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_26.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_28.jpeg" alt="">
+                  </li>
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_20.jpeg" alt="">
+                  </li>
+              </ul>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </section>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false" id="search">
+            <button><img src="../pic/weather/icons8-search-100.png"></button>
+        </div>
+        <div class="error"><p>Invalid city name</p></div>
+        <div class="weather">
+            <img src="../pic/weather/icons8-light-rain-100.png" class="weather-icon">
+            <h1 class="temp">22 
+                <span>&deg;C</span>
+            </h1>
+            <h2 class="city">New York</h2>
+            <hr>
+            <div class="details">
+                <div class="col">
+                    <img src="../pic/weather/icons8-wet-100.png" alt="">
+                    <div><p class="humidity">50 %</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="../pic/weather/icons8-wind-100.png" alt="">
+                    <div><p class="wind">10 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
