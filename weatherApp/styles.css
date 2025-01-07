@@ -81,7 +81,8 @@ body {
     backdrop-filter: blur(10px);
     /* -webkit-backdrop-filter: blur(10px); */
     border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);}
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
 
 .search {
     width: 100%;
@@ -197,4 +198,131 @@ p {
     margin-left: 10px;
     color: #DA498D;
     display: none;
+}
+
+.itemsrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    /* min-height: 70vh; */
+    padding: 20px;
+    /* background: linear-gradient(45deg, #FEF9F2, #FFE3E3); */
+    color: #789DBC;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(10px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.todo-app h2 {
+    color: #DA498D;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background-color: #789DBC;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+.taskinput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 14px;
+    color: #FEF9F2;
+}
+
+.taskbtn {
+    border: none;
+    outline: none;
+    padding: 16px 35px;
+    background: #DA498D;
+    color: #FEF9F2;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.taskbtn:hover {
+    background: #bc3775;
+}
+
+.container ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 10px 5px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    text-align: left;
+    text-indent: 35px;
+}
+
+.container ul li:hover {
+    background-color: #fef9f281;
+    border-radius: 25px;
+}
+
+.container ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    /* border-radius: 50%; */
+    background-image: url("../pic/UI/icons8-unchecked-checkbox-100.png");
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+} 
+
+.container ul li.checked {
+    text-decoration: line-through;
+    color: #DA498D;
+}
+
+.container ul li.checked::before {
+    background-image: url("../pic/UI/icons8-checked-checkbox-100.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #DA498D;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    text-indent: 0;
+}
+
+ul li span:hover {
+    background: #fef9f281;
 }

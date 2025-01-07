@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Englebert&display=swap" rel="stylesheet">
-    <title>L&DS Weather App</title>
+    <title>L&DS Home Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,52 +30,72 @@
                     <img src="../lads/SDAL_1.jpeg" alt="">
                   </li>
                   <li class="mySlides fade">
-                    <img src="../lads/SDAL_12.jpeg" alt="">
+                    <img src="../lads/SDAL_13.jpeg" alt="">
                   </li>
                   <li class="mySlides fade">
-                    <img src="../lads/SDAL_26.jpeg" alt="">
+                    <img src="../lads/SDAL_14.jpeg" alt="">
                   </li>
                   <li class="mySlides fade">
-                    <img src="../lads/SDAL_28.jpeg" alt="">
+                    <img src="../lads/SDAL_15.jpeg" alt="">
                   </li>
                   <li class="mySlides fade">
-                    <img src="../lads/SDAL_20.jpeg" alt="">
+                    <img src="../lads/SDAL_16.jpeg" alt="">
+                  </li>                  
+                  <li class="mySlides fade">
+                    <img src="../lads/SDAL_24.jpeg" alt="">
                   </li>
               </ul>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </section>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="Enter City Name" spellcheck="false" id="search">
-            <button><img src="../pic/weather/icons8-search-100.png"></button>
+    </section> // Image Carousel
+    <div class="itemsrow">
+      <div class="card">
+          <div class="search">
+              <input type="text" placeholder="Enter City Name" spellcheck="false" id="search">
+              <button><img src="../pic/weather/icons8-search-100.png"></button>
+          </div>
+          <div class="error"><p>Invalid city name</p></div>
+          <div class="weather">
+              <img src="../pic/weather/icons8-light-rain-100.png" class="weather-icon">
+              <h1 class="temp">22 
+                  <span>&deg;C</span>
+              </h1>
+              <h2 class="city">New York</h2>
+              <hr>
+              <div class="details">
+                  <div class="col">
+                      <img src="../pic/weather/icons8-wet-100.png" alt="">
+                      <div><p class="humidity">50 %</p>
+                          <p>Humidity</p>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <img src="../pic/weather/icons8-wind-100.png" alt="">
+                      <div><p class="wind">10 km/h</p>
+                          <p>Wind Speed</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> // Weather Card
+
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="../pic/UI/icons8-choice-100.png" alt=""></h2>
+        <div class="row">
+          <input class="taskinput" type="text" id="input-box" placeholder="Add a task">
+          <button class="taskbtn" onclick="AddTask()">Add</button>
         </div>
-        <div class="error"><p>Invalid city name</p></div>
-        <div class="weather">
-            <img src="../pic/weather/icons8-light-rain-100.png" class="weather-icon">
-            <h1 class="temp">22 
-                <span>&deg;C</span>
-            </h1>
-            <h2 class="city">New York</h2>
-            <hr>
-            <div class="details">
-                <div class="col">
-                    <img src="../pic/weather/icons8-wet-100.png" alt="">
-                    <div><p class="humidity">50 %</p>
-                        <p>Humidity</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="../pic/weather/icons8-wind-100.png" alt="">
-                    <div><p class="wind">10 km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul class="list-container" id="list-container">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 1</li> -->
+        </ul>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+  </div> // itemsrow
+
+  <script src="script.js"></script>
 </body>
 </html>
