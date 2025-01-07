@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+    background-image: url("../lads/SDAL_28.jpeg");
+    background-size: cover;
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1 {
+    font-size: 28px;
+    color: #001e4d;
+    font-weight: 400;
+    border-bottom: 2px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 22px;
+    color: #001e4d;
+    font-weight: 400;
+    text-indent: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    background: #fff;
+    color: #222;
+    width: 100%;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor:not-drop;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    margin: 20px auto 0;   
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ffb3b3;
+}
