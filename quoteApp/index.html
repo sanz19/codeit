@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/quote.png" type="image/quote-icon">
+    <title>Quote of the day</title>
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+        <div>
+            <button onclick="getQuote(api_url)">New Quote</button>
+            <button onclick="x()"><img width="100" height="100" src="https://img.icons8.com/ios-filled/100/twitterx--v2.png" alt="twitterx--v2"/>Tweet</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
