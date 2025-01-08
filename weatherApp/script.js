@@ -39,7 +39,6 @@ async function checkWeather(city) {
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
     }else{
-    
     var data = await response.json();
     console.log(data);
 
@@ -51,22 +50,22 @@ async function checkWeather(city) {
     if(data.weather[0].main == "Clouds") {
         weatherIcon.src = "../pic/weather/icons8-cloud-100.png";
     }else if(data.weather[0].main == "Clear") {
-        weatherIcon.src = "../pic/weather/icons8-sun-100.png";
-    } else if(data.weather[0].main == "Rain") {
-        weatherIcon.src = "../pic/weather/icons8-heavy-rain-100.png";
-    } else if(data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "../pic/weather/icons8-light-rain-100.png";
-    }else if(data.weather[0].main == "Mist") {
-        weatherIcon.src = "../pic/weather/icons8-partly-cloudy-day-100.png";
-    }else if(data.weather[0].main == "Snow") {
-        weatherIcon.src = "../pic/weather/icons8-snow-100.png";
-    } else if(data.weather[0].main == "Haze") {
-        weatherIcon.src = "../pic/weather/icons8-haze-100.png";
-    } else if(data.weather[0].main == "Thunderstorm") {
-        weatherIcon.src = "../pic/weather/icons8-stormy-weather-100.png";
-    }
-    document.querySelector(".weather").style.display = "block";
-    document.querySelector(".error").style.display = "none";
+          weatherIcon.src = "../pic/weather/icons8-sun-100.png";
+      } else if(data.weather[0].main == "Rain") {
+          weatherIcon.src = "../pic/weather/icons8-heavy-rain-100.png";
+      } else if(data.weather[0].main == "Drizzle") {
+          weatherIcon.src = "../pic/weather/icons8-light-rain-100.png";
+      }else if(data.weather[0].main == "Mist") {
+          weatherIcon.src = "../pic/weather/icons8-partly-cloudy-day-100.png";
+      }else if(data.weather[0].main == "Snow") {
+          weatherIcon.src = "../pic/weather/icons8-snow-100.png";
+      } else if(data.weather[0].main == "Haze") {
+          weatherIcon.src = "../pic/weather/icons8-haze-100.png";
+      } else if(data.weather[0].main == "Thunderstorm") {
+          weatherIcon.src = "../pic/weather/icons8-stormy-weather-100.png";
+      }
+      document.querySelector(".weather").style.display = "block";
+      document.querySelector(".error").style.display = "none";
     }
 }
 
