@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>MyMusic</title>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <span class="material-icons-outlined">navigate_before</span>
+                </div>
+                <div class="circle">
+                    <span class="material-icons-outlined">menu</span>
+                </div>
+            </nav>
+            <img src="../lads/SDAL_14.jpeg" class="songImg" id="songImg">
+            <h1>The Summoning</h1>
+            <p>Sleep Token</p>
+
+            <audio id="song">
+                <source src="../pic/media/the-summoning.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+            <div class="controls">
+                <div><span class="material-icons-outlined">fast_rewind</span></div>
+                <div onclick="playPause()"><span id="ctrlICon" class="material-icons-outlined">play_arrow</span></div>
+                <div><span class="material-icons-outlined">fast_forward</span></div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script>
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let songImg = document.getElementById("songImg");
+        let ctrlICon = document.getElementById("ctrlICon");
+        
+        // song.pause();
+        song.onloadedmetadata = function() {
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+        
+        function playPause() {
+            // <span class="material-icons-outlined">pause</span>
+            if(ctrlICon.innerHTML === "pause"){
+                // console.log("mamaste")
+                song.pause();
+                ctrlICon.innerHTML = "play_arrow";
+                songImg.classList.remove("cdplayer");
+                songImg.style.animationPlayState = "paused";
+            } else {
+                song.play();
+                ctrlICon.innerHTML = "pause";
+                songImg.classList.add("cdplayer");
+                songImg.style.animationPlayState = "running";
+            }
+        }
+        
+        
+        if(song.play()) {
+            setInterval(() =>{
+                progress.value = song.currentTime;
+            }, 500);
+        }
+
+        progress.onchange = function(){
+            song.play();
+            song.currentTime = progress.value;
+            ctrlICon.innerHTML = "pause";
+        }
+
+
+    </script>
+</body>
+</html>
