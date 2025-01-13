@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color-pixels/100/appointment-reminders.png" type="image/x-icon">
+    <title>You got a new message!</title>
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="MyMessage()">Click me, cutie</button>
+        <div class="popup" id="popup">
+            <img width="100" height="100" src="https://img.icons8.com/color-pixels/100/like.png" alt="like"/>
+            <h2>I Love You</h2>
+            <p>You're like a glowing star.<br>My friend, you hold a special place in my heart.</p>
+            <button type="button" onclick="CloseMyMessage()">Thank You</button>
+        </div>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        function MyMessage() {
+            popup.classList.add("open-popup");
+        }
+
+        function CloseMyMessage() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>
