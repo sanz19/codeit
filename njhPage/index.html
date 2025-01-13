@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NJH</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="../pic/examples/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">HIRE ME</a></li>
+            </ul>
+            <img width="100" height="100" src="https://img.icons8.com/windows/100/crescent-moon.png" id="icon"/>
+        </nav>
+        <div class="info">
+            <h1>Lorem <span>ipsum</span> dolor sit</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, id non aliquam<br>
+                aut voluptas repellendus tenetur nulla maiores beatae pariatur nobis eaque nam libero neque,<br>
+                ullam assumenda architecto iure nostrum!</p>
+            <a href="#">Lorem ipsum</a>
+        </div>
+        <div class="img-box">
+            <img src="../pic/examples/asset.png" class="back-img">
+            <img src="../pic/examples/njh.png" class="main-img">
+        </div>
+        <div class="social-links">
+            <a href="#"><img width="100" height="100" src="https://img.icons8.com/windows/100/linkedin.png" alt="linkedin"/></a>
+            <a href="#"><img width="128" height="128" src="https://img.icons8.com/windows/128/behance.png" alt="behance"/></a>
+            <a href="#"><img width="128" height="128" src="https://img.icons8.com/windows/128/github.png" alt="github"/></a>
+
+        </div>
+    </div>
+
+    <!-- 
+    DEA6B3
+    CA7C92
+    AC5669
+    A04C5C
+    5E323B
+    -->
+    <script>
+        let icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "https://img.icons8.com/windows/128/sun--v1.png"
+            } else {
+                icon.src = "https://img.icons8.com/windows/100/crescent-moon.png"
+            }
+        }
+    </script>
+</body>
+</html>

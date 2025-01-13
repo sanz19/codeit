@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dontchusee</title>
+</head>
+<body>
+    <div class="input-box">
+        <input type="password" placeholder="Password" name="" id="password">
+        <img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/invisible.png" alt="invisible" id="eyeicon"/>
+
+    </div>
+    <!-- 
+    <img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/visible.png" alt="visible"/>
+    -->
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function() {
+            if(password.type == "password") {
+                password.type = "text";
+                eyeicon.src = "https://img.icons8.com/pulsar-gradient/48/visible.png";
+            } else {
+                password.type = "password";
+                eyeicon.src = "https://img.icons8.com/pulsar-gradient/48/invisible.png";
+            }
+        }
+
+    </script>
+</body>
+</html>
