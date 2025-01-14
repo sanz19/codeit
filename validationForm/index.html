@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <form>
+      <img class="fa-paper-plane" width="50" height="50" src="https://img.icons8.com/ios/50/sent--v1.png" alt="sent--v1"/>
+
+      <div class="input-group">
+        <label>Full Name:</label>
+        <input type="text" placeholder="Mary Sue" id="contact-name" onkeyup="ValidateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No:</label>
+        <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="ValidatePhone()">
+        <span id="phone-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email:</label>
+        <input type="email" placeholder="example@email.com"
+        id="contact-email" onkeyup="ValidateEmail()">
+        <span id="email-error"></span>
+
+      </div>   
+
+      <div class="input-group">
+        <label>Comments:</label>
+        <textarea rows="3" placeholder="Enter your message" id="contact-msg" onkeyup="ValidateMsg()"></textarea>
+        <span id="msg-error"></span>
+      </div>
+
+    <button onclick="return ValidateForm()">Submit</button>
+    <span id="submit-error"></span>
+
+   
+  </form>  
+  </div>
+   <script src="script.js"></script>
+</body>
+</html>
