@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>L&DS Gallery</title>
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img width="64" height="64" src="https://img.icons8.com/hatch/64/back.png" id="back"/>
+        <div class="gallery">
+            <div>
+                <span><img src="../lads/SDAL_13.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_14.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_15.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_16.jpeg" alt=""></span>
+            </div>
+            <div>
+                <span><img src="../lads/SDAL_24.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_6.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_5.jpeg" alt=""></span>
+                <span><img src="../lads/SDAL_11.jpeg" alt=""></span>
+            </div>
+        </div>
+        <img width="64" height="64" src="https://img.icons8.com/hatch/64/forward.png" id="forward"/>
+    </div>
+
+    <script>
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBTN = document.getElementById("back");
+        let nextBTN = document.getElementById("forward");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        });
+
+        nextBTN.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 750;});
+        backBTN.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 750;});
+    </script>
+</body>
+</html>
